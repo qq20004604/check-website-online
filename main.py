@@ -26,7 +26,7 @@ class CheckWebsiteOnline(object):
     # 轮询查询
     def run(self):
         while True:
-            print(f"%s 开始第%d轮检查……" % (self.check_count, time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())))
+            print(f"%s 开始第 %d 轮检查……" % (time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), self.check_count))
             is_online = self.check_website_status()
             if is_online:
                 print(f"{self.web_site} is online.")
